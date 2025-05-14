@@ -1,23 +1,16 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
-import ProtectedRoute from './ProtectedRoute';
 import NotFound from './NotFound';
+import TestComponent from './TestComponent';
 
 
 function App() {
-  const getProtectedRoute = (Component, specificRoles = null) => {
-    const allowedRoles = specificRoles || ['admin'];
-    return (
-      <ProtectedRoute allowedRoles={allowedRoles}>
-        <Component />
-      </ProtectedRoute>
-    );
-  };
 
   return (
     <Router>
       <Routes>
         <Route path='*' element={<NotFound/>}/>
+        <Route path='/test' element={<TestComponent/>} />
       </Routes>
     </Router>
   );
