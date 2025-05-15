@@ -118,6 +118,10 @@
   --color-sidebar-border: var(--sidebar-border);
 
   --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-ungu-tua: #5F43B2;
+
+  --color-ungu-muda: #E3CFE8;
 }
 
 :root {
